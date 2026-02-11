@@ -34,10 +34,6 @@ const InstagramFeed = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-purple-100 to-pink-100 dark:from-purple-900/30 dark:to-pink-900/30 border-2 border-purple-300 dark:border-purple-700 mb-4">
-            <Instagram className="w-5 h-5 text-purple-600 dark:text-purple-400" />
-            <span className="text-sm font-semibold text-purple-800 dark:text-purple-300">@henriquebalseiros</span>
-          </div>
           <h2 className="font-heading font-black text-4xl md:text-5xl text-gray-900 dark:text-white mb-4">
             Conheça Henrique
           </h2>

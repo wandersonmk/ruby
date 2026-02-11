@@ -1,9 +1,6 @@
-import { useState } from "react";
 import { Instagram, Facebook, Mail, Phone, MapPin } from "lucide-react";
-import EmailModal from "./EmailModal";
 
 const Footer = () => {
-  const [isEmailModalOpen, setIsEmailModalOpen] = useState(false);
   return (
     <footer id="contato" className="bg-primary text-primary-foreground">
       <div className="container mx-auto px-4 py-16">
@@ -91,14 +88,6 @@ const Footer = () => {
               >
                 <Phone size={20} />
               </a>
-              <button
-                onClick={() => setIsEmailModalOpen(true)}
-                className="w-10 h-10 rounded-lg bg-primary-foreground/10 flex items-center justify-center hover:bg-secondary hover:text-secondary-foreground transition-all"
-                aria-label="Enviar Email"
-                title="Enviar Email"
-              >
-                <Mail size={20} />
-              </button>
             </div>
           </div>
         </div>
@@ -115,11 +104,6 @@ const Footer = () => {
           </p>
         </div>
       </div>
-
-      <EmailModal 
-        isOpen={isEmailModalOpen} 
-        onClose={() => setIsEmailModalOpen(false)} 
-      />
     </footer>
   );
 };

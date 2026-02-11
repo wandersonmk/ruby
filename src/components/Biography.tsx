@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { GraduationCap, Heart, Users, TreePine } from "lucide-react";
-import portraitImage from "@/assets/foto perfil.png";
+import portraitImage from "@/assets/foto perfil.jpeg";
 
 const Biography = () => {
   const highlights = [
