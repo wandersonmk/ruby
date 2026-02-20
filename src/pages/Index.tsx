@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Biography from "@/components/Biography";
+import Family from "@/components/Family";
 import RubyStory from "@/components/RubyStory";
 import Achievements from "@/components/Achievements";
 import Partnerships from "@/components/Partnerships";
@@ -14,6 +15,7 @@ const Index = () => {
       <Header />
       <Hero />
       <Biography />
+      <Family />
       <RubyStory />
       <Achievements />
       <Partnerships />
