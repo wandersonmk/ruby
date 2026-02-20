@@ -1,49 +1,38 @@
 import { motion } from "framer-motion";
-import { Building2, Landmark, Users, CheckCircle2, Droplets, Briefcase, Heart, PartyPopper, Building, Accessibility } from "lucide-react";
-import parceriaPolitica from "@/assets/parceria-politica.jpg";
+import { Building2, Landmark, Users, CheckCircle2, Heart, Building, Accessibility, PartyPopper, Briefcase } from "lucide-react";
+import parceriaPolitica from "@/assets/parceria-politica.png";
 
 const Partnerships = () => {
   const partners = [
     {
-      name: "Marcos Damásio",
-      role: "Deputado Estadual",
-      party: "PL",
+      name: "Ruby Moreira Bergamini",
+      role: "Pré-candidata a Deputada Federal",
+      party: "União Brasil",
+      subtitle: "Ruby Bergamini",
       description:
-        "Deputado estadual em terceiro mandato, é parceiro importante para Salto em projetos de desenvolvimento e melhorias na cidade.",
-      icon: Landmark,
-      contributions: [
-        { icon: Building, text: "Apoio a projetos de desenvolvimento e melhorias na cidade" },
-        { icon: Heart, text: "Emendas e indicações para saúde, oportunidades e infraestrutura" },
-        { icon: Users, text: "Trabalho conjunto com o trio para avanços em Salto" },
-      ],
-    },
-    {
-      name: "Henrique Balseiros",
-      role: "Vereador em Salto-SP",
-      party: "PL",
-      subtitle: "Professor Henrique Balseiros",
-      description:
-        "O elo local mais direto. Como vereador mais votado da história da cidade, atua na Câmara Municipal propondo ações cotidianas e intermediando recursos maiores.",
+        "Enfermeira dedicada e apaixonada por Salto. Com sua experiência em cuidado e responsabilidade profissional, busca ampliar seu impacto na sociedade levando seus valores para Brasília.",
       icon: Users,
       isMain: true,
       contributions: [
-        { icon: Accessibility, text: "Reuniões públicas para atualizar leis sobre pessoas com deficiência" },
-        { icon: Droplets, text: "Propostas para melhorar o abastecimento de água (SAAE)" },
-        { icon: Briefcase, text: "Divulgação de vagas de emprego locais" },
-        { icon: Building2, text: "Intermediação de parcerias com deputados para trazer recursos" },
+        { icon: Heart, text: "Foco em saúde e qualidade de vida da população" },
+        { icon: Users, text: "Compromisso com cuidado e responsabilidade social" },
+        { icon: Accessibility, text: "Defesa dos direitos das pessoas com deficiência" },
+        { icon: Building2, text: "Trabalhando para trazer recursos federais para Salto" },
       ],
     },
     {
-      name: "Antonio Carlos Rodrigues",
-      role: "Deputado Federal",
-      party: "PL",
+      name: "Carlão Pignatari",
+      role: "Deputado Estadual SP",
+      party: "União Brasil",
+      subtitle: "4º Mandato",
       description:
-        "Forte atuação em trazer emendas e recursos federais para Salto. Apoio contínuo em infraestrutura, saúde e eventos culturais.",
-      icon: Building2,
+        "Ex-Presidente da ALESP (2021/2023) e Ex-Prefeito de Votuporanga (2001/2008). Trabalhando pelo interior paulista com foco em desenvolvimento e recursos para as cidades.",
+      icon: Landmark,
       contributions: [
-        { icon: PartyPopper, text: "R$ 698.104,94 para o Carnaval Bonecões da Barra (2026)" },
-        { icon: Building, text: "Emendas do Ministério do Turismo" },
-        { icon: Heart, text: "Apoio em infraestrutura, saúde e eventos municipais" },
+        { icon: Building, text: "4º Mandato como Deputado Estadual" },
+        { icon: Landmark, text: "Ex-Presidente da ALESP – 2021/2023" },
+        { icon: Building2, text: "Ex-Prefeito de Votuporanga – 2001/2008" },
+        { icon: Heart, text: "Trabalhando pelo interior paulista" },
       ],
     },
   ];
@@ -66,8 +55,8 @@ const Partnerships = () => {
             <span className="text-primary">Geram Resultados</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            O trio forma uma rede de apoio alinhada politicamente (PL), focada em captar 
-            recursos estaduais e federais para Salto.
+            Trabalhando em parceria para captar recursos estaduais e federais para Salto, 
+            com foco em desenvolvimento, infraestrutura e qualidade de vida.
           </p>
         </motion.div>
 
@@ -79,11 +68,11 @@ const Partnerships = () => {
           transition={{ duration: 0.6 }}
           className="mb-16"
         >
-          <div className="relative max-w-4xl mx-auto">
+          <div className="relative max-w-2xl mx-auto">
             <div className="rounded-2xl overflow-hidden shadow-card border border-border">
               <img
                 src={parceriaPolitica}
-                alt="Marcos Damásio, Henrique Balseiros e Antonio Carlos Rodrigues - Trabalhando por Salto"
+                alt="Ruby Moreira Bergamini e Carlão Pignatari - Trabalhando por Salto"
                 className="w-full h-auto"
               />
             </div>
@@ -103,7 +92,7 @@ const Partnerships = () => {
         </motion.div>
 
         {/* Partners Grid */}
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {partners.map((partner, index) => (
             <motion.div
               key={partner.name}
@@ -184,9 +173,9 @@ const Partnerships = () => {
                 Resultados Concretos para Salto
               </h3>
               <p className="text-muted-foreground text-center leading-relaxed mb-6">
-                O relacionamento entre vereador, deputado estadual e deputado federal gera resultados 
-                concretos para a cidade. Juntos, impulsionam eventos culturais (como o Carnaval Bonecões da Barra), 
-                melhorias em infraestrutura (água, hospital), emprego, inclusão e desenvolvimento geral.
+                A parceria entre deputado estadual e pré-candidata a deputada federal gera força política 
+                para trazer recursos e desenvolvimento para Salto. Juntos, buscam impulsionar melhorias 
+                em infraestrutura, saúde, emprego, cultura e desenvolvimento geral da cidade.
               </p>
               
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">

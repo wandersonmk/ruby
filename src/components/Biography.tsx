@@ -1,28 +1,28 @@
 import { motion } from "framer-motion";
-import { GraduationCap, Heart, Users, TreePine } from "lucide-react";
+import { GraduationCap, Heart, Users, Briefcase } from "lucide-react";
 import portraitImage from "@/assets/foto perfil.jpeg";
 
 const Biography = () => {
   const highlights = [
     {
       icon: GraduationCap,
-      title: "Educação Física",
-      description: "Licenciatura e Bacharelado pela CEUNSP em Itu",
+      title: "Formação",
+      description: "Técnica em Segurança do Trabalho e Enfermeira",
     },
     {
       icon: Heart,
-      title: "Paixão pelo Esporte",
-      description: "Encontrou no esporte a oportunidade de fazer faculdade",
+      title: "Família",
+      description: "Mãe dedicada de Ana Clara e Anna Isabella",
     },
     {
       icon: Users,
       title: "Experiência",
-      description: "Atuou na área escolar e academias da região",
+      description: "Enfermeira do Trabalho com competência e sensibilidade",
     },
     {
-      icon: TreePine,
-      title: "Cidade em Ação",
-      description: "Projeto social de revitalização e plantio de árvores",
+      icon: Briefcase,
+      title: "Pré-candidatura",
+      description: "Deputada Federal comprometida com as pessoas",
     },
   ];
 
@@ -41,26 +41,13 @@ const Biography = () => {
             <div className="relative z-10">
               <img
                 src={portraitImage}
-                alt="Henrique Balseiros"
+                alt="Ruby Moreira Bergamini"
                 className="w-full max-w-md mx-auto rounded-2xl shadow-card"
               />
               {/* Decorative Elements */}
               <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-secondary/20 rounded-2xl -z-10" />
               <div className="absolute -top-6 -left-6 w-24 h-24 bg-primary/10 rounded-2xl -z-10" />
             </div>
-
-            {/* Birth Info Card */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.4 }}
-              className="absolute -bottom-4 left-0 lg:left-auto lg:-right-8 bg-card rounded-xl shadow-card p-4 border border-border"
-            >
-              <p className="text-sm text-muted-foreground">Nascido em</p>
-              <p className="font-heading font-bold text-primary text-lg">01/05/1994</p>
-              <p className="text-xs text-secondary font-medium">Dia do Trabalho</p>
-            </motion.div>
           </motion.div>
 
           {/* Content Column */}
@@ -74,25 +61,25 @@ const Biography = () => {
               Biografia
             </span>
             <h2 className="font-heading font-bold text-3xl md:text-4xl lg:text-5xl text-foreground mb-6">
-              Conheça o{" "}
-              <span className="text-primary">Professor Henrique</span>
+              Conheça a{" "}
+              <span className="text-primary">Ruby Moreira Bergamini</span>
             </h2>
 
             <div className="space-y-4 text-muted-foreground text-lg leading-relaxed mb-8">
               <p>
-                <strong className="text-foreground">Henrique Balseiros</strong>, 31 anos, 
-                é formado em Licenciatura e Bacharelado em Educação Física pela faculdade 
-                CEUNSP em Itu. Filho de Eulina e Henrique, irmão de Rafael.
+                <strong className="text-foreground">Ruby Moreira Bergamini</strong> é uma mulher forte, 
+                dedicada e apaixonada pela família. Nordestina de origem, construiu sua trajetória com base 
+                no cuidado ao próximo, na responsabilidade profissional e no amor por suas filhas, 
+                Ana Clara e Anna Isabella, suas maiores inspirações. Casada com Fernando Bergamini, 
+                sempre buscou crescer por meio do estudo e do trabalho, formando-se Técnica em Segurança 
+                do Trabalho e tornando-se enfermeira, atuando também como enfermeira do trabalho com 
+                competência e sensibilidade.
               </p>
               <p>
-                Começou sua vida com o sonho de ser jogador de futebol como qualquer garoto. 
-                Não conseguiu, mas encontrou no esporte a oportunidade de fazer a faculdade. 
-                Atuou dois anos na área escolar e alguns anos em academias na região.
-              </p>
-              <p>
-                É autor do projeto social <strong className="text-secondary">Cidade em Ação</strong>, 
-                um programa comprometido com ações de cidadania e responsabilidade social, 
-                focado na revitalização de espaços públicos abandonados e plantio de árvores.
+                Ruby vive em Salto, no interior de São Paulo, cidade pela qual é profundamente apaixonada 
+                e onde construiu seu lar. Movida pelo desejo de ampliar seu impacto na sociedade, deu 
+                início à sua pré-candidatura na política como <strong className="text-secondary">Deputada Federal</strong>, 
+                levando consigo seus valores de cuidado, responsabilidade e compromisso com as pessoas.
               </p>
             </div>
 

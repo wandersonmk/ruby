@@ -1,6 +1,6 @@
-# Site Institucional - Henrique Balseiros
+# Site Institucional - Ruby Moreira Bergamini
 
-Site oficial do Vereador Henrique Balseiros de Salto/SP.
+Site oficial de Ruby Moreira Bergamini, pré-candidata a Deputada Federal por Salto/SP.
 
 ## Projeto
 

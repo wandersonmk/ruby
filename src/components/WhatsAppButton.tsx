@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 
 const WhatsAppButton = () => {
-  const phoneNumber = "5511997589990"; // Formato: código do país + DDD + número
+  const phoneNumber = "55119333749444"; // Formato: código do país + DDD + número
   const message = "Olá! Gostaria de mais informações.";
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
   const [showScrollTop, setShowScrollTop] = useState(false);

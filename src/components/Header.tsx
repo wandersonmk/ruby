@@ -14,9 +14,29 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    const targetId = href.replace('#', '');
+    const targetElement = document.getElementById(targetId);
+    
+    if (targetElement) {
+      const headerHeight = 80; // Height of fixed header
+      const targetPosition = targetElement.offsetTop - headerHeight;
+      
+      window.scrollTo({
+        top: targetPosition,
+        behavior: 'smooth'
+      });
+      
+      // Close mobile menu if open
+      setIsMobileMenuOpen(false);
+    }
+  };
+
   const navLinks = [
     { label: "Início", href: "#inicio" },
     { label: "Biografia", href: "#biografia" },
+    { label: "História", href: "#historia" },
     { label: "Conquistas", href: "#conquistas" },
     { label: "Parcerias", href: "#parcerias" },
     { label: "Instagram", href: "#instagram" },
@@ -33,15 +53,23 @@ const Header = () => {
     >
       <div className="container mx-auto px-4 flex items-center justify-between">
         <a href="#inicio" className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center">
-            <span className="font-heading font-bold text-primary text-lg">HB</span>
+          {/* Logo retangular horizontal inspirado na bandeira do Brasil */}
+          <div className="relative w-[63px] h-[44px] rounded-lg bg-accent flex items-center justify-center overflow-hidden shadow-md">
+            {/* Losango amarelo - tamanho ajustado proporcionalmente */}
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="w-[29px] h-[29px] bg-secondary transform rotate-45"></div>
+            </div>
+            {/* Círculo azul com RB - aumentado */}
+            <div className="relative w-[24px] h-[24px] rounded-full bg-primary flex items-center justify-center z-10 shadow-sm">
+              <span className="font-heading font-black text-white text-[10px] tracking-tighter">RB</span>
+            </div>
           </div>
-          <div className="hidden sm:block">
+          <div className="hidden lg:block">
             <p className="font-heading font-bold text-primary-foreground text-sm leading-tight">
-              HENRIQUE
+              RUBY
             </p>
             <p className="font-heading font-bold text-secondary text-xs">
-              BALSEIROS
+              BERGAMINI
             </p>
           </div>
         </a>
@@ -52,7 +80,8 @@ const Header = () => {
             <a
               key={link.href}
               href={link.href}
-              className="text-primary-foreground/90 hover:text-secondary font-medium text-sm transition-colors duration-200"
+              onClick={(e) => handleSmoothScroll(e, link.href)}
+              className="text-primary-foreground/90 hover:text-secondary font-medium text-sm transition-colors duration-200 cursor-pointer"
             >
               {link.label}
             </a>
@@ -82,8 +111,8 @@ const Header = () => {
                 <a
                   key={link.href}
                   href={link.href}
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className="text-primary-foreground/90 hover:text-secondary font-medium text-sm py-2 transition-colors duration-200"
+                  onClick={(e) => handleSmoothScroll(e, link.href)}
+                  className="text-primary-foreground/90 hover:text-secondary font-medium text-sm py-2 transition-colors duration-200 cursor-pointer"
                 >
                   {link.label}
                 </a>

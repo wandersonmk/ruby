@@ -1,31 +1,31 @@
 import { motion } from "framer-motion";
-import { Vote, FileText, Trophy, TrendingUp } from "lucide-react";
+import { Heart, Briefcase, GraduationCap, Users } from "lucide-react";
 
 const Achievements = () => {
   const stats = [
     {
-      icon: Vote,
-      value: "2.142",
-      label: "Votos na 1ª Eleição",
-      sublabel: "Mais votado da chapa",
+      icon: Heart,
+      value: "15+",
+      label: "Anos de Experiência",
+      sublabel: "Área da Saúde",
     },
     {
-      icon: TrendingUp,
-      value: "2.852",
-      label: "Votos na Reeleição",
-      sublabel: "Crescimento de 33%",
+      icon: GraduationCap,
+      value: "2",
+      label: "Formações",
+      sublabel: "Técnica e Enfermeira",
     },
     {
-      icon: FileText,
-      value: "Recordista",
-      label: "Em Proposituras",
-      sublabel: "2 anos consecutivos",
+      icon: Briefcase,
+      value: "100%",
+      label: "Dedicação",
+      sublabel: "Às pessoas de Salto",
     },
     {
-      icon: Trophy,
-      value: "#1",
-      label: "Mais Votado",
-      sublabel: "História de Salto",
+      icon: Users,
+      value: "Família",
+      label: "Seus Valores",
+      sublabel: "Cuidado e Responsabilidade",
     },
   ];
 
@@ -49,11 +49,11 @@ const Achievements = () => {
             Conquistas
           </span>
           <h2 className="font-heading font-bold text-3xl md:text-4xl lg:text-5xl text-primary-foreground mb-4">
-            Resultados que Falam por Si
+            Uma Trajetória de Cuidado e Dedicação
           </h2>
           <p className="text-primary-foreground/70 text-lg max-w-2xl mx-auto">
-            Um vereador com pauta na Educação, mas com olhar para todas as áreas da cidade. 
-            Seu diferencial é apresentar soluções aos problemas.
+            Nordestina de origem, construiu sua vida em Salto com base no trabalho, 
+            estudo e amor pela família. Agora quer ampliar seu impacto cuidando das pessoas.
           </p>
         </motion.div>
 
@@ -95,9 +95,9 @@ const Achievements = () => {
           className="mt-16 text-center"
         >
           <blockquote className="text-xl md:text-2xl text-primary-foreground/80 italic max-w-3xl mx-auto">
-            "Foi recordista por dois anos consecutivos na Câmara em números de 
-            proposituras – documentos encaminhados à Prefeitura solicitando 
-            melhorias para a cidade."
+            "Sempre buscou crescer por meio do estudo e do trabalho, levando cuidado e 
+            responsabilidade em tudo que faz. Agora quer levar esses valores para Brasília, 
+            trabalhando pelas pessoas de Salto."
           </blockquote>
         </motion.div>
       </div>

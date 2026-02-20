@@ -86,7 +86,7 @@ const EmailModal = ({ isOpen, onClose }: EmailModalProps) => {
             Entre em Contato
           </DialogTitle>
           <DialogDescription>
-            Envie sua mensagem diretamente para Henrique Balseiros. Responderemos em breve!
+            Envie sua mensagem diretamente para Ruby Moreira Bergamini. Responderemos em breve!
           </DialogDescription>
         </DialogHeader>
 

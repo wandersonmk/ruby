@@ -60,6 +60,16 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        // Cores específicas da Bandeira do Brasil
+        brasil: {
+          azul: "hsl(210, 100%, 30%)",
+          "azul-claro": "hsl(210, 100%, 40%)",
+          "azul-escuro": "hsl(210, 100%, 20%)",
+          verde: "hsl(120, 75%, 30%)",
+          "verde-claro": "hsl(120, 70%, 40%)",
+          amarelo: "hsl(50, 100%, 50%)",
+          "amarelo-claro": "hsl(50, 100%, 60%)",
+        },
       },
       fontFamily: {
         sans: ['Open Sans', 'sans-serif'],
