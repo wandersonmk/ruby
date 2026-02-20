@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Heart } from "lucide-react";
+import familyPhoto from "@/assets/tio rafa-20.jpg";
 
 const Family = () => {
   return (
@@ -41,7 +42,7 @@ const Family = () => {
             >
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <img
-                  src="/src/assets/tio rafa-20.jpg"
+                  src={familyPhoto}
                   alt="Ruby e Fernando Bergamini"
                   className="w-full h-auto object-cover"
                 />
