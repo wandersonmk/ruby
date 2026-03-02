@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import heroBackground from "@/assets/salto-city.jpg";
-import rubyPhoto from "@/assets/tio rafa-56.jpg";
+import rubyPhoto from "@/assets/tio rafa-560.jpeg";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 
 const Hero = () => {
   const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
@@ -111,13 +112,28 @@ const Hero = () => {
               <div className="absolute -inset-2 bg-gradient-to-br from-accent/10 via-secondary/10 to-primary/10 rounded-3xl blur-md opacity-40 group-hover:opacity-60 transition-opacity duration-300"></div>
               
               {/* Foto */}
-              <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-[22rem] lg:h-[22rem] rounded-3xl overflow-hidden shadow-2xl border border-white/20">
-                <img 
-                  src={rubyPhoto} 
-                  alt="Ruby Bergamini" 
-                  className="w-full h-full object-cover object-center"
-                />
-              </div>
+              <Dialog>
+                <DialogTrigger asChild>
+                  <button
+                    type="button"
+                    className="relative w-64 h-64 md:w-80 md:h-80 lg:w-[22rem] lg:h-[22rem] rounded-3xl overflow-hidden shadow-2xl border border-white/20 cursor-zoom-in"
+                    aria-label="Abrir foto completa"
+                  >
+                    <img
+                      src={rubyPhoto}
+                      alt="Ruby Bergamini"
+                      className="w-full h-full object-cover object-[50%_15%] scale-[1.35]"
+                    />
+                  </button>
+                </DialogTrigger>
+                <DialogContent className="max-w-5xl w-[95vw] border-0 bg-transparent p-2 shadow-none">
+                  <img
+                    src={rubyPhoto}
+                    alt="Ruby Bergamini - foto completa"
+                    className="w-full max-h-[85vh] object-contain rounded-2xl"
+                  />
+                </DialogContent>
+              </Dialog>
               
               {/* Elementos decorativos sutis */}
               <div className="absolute -bottom-2 -right-2 w-16 h-16 bg-secondary/30 rounded-2xl blur-sm -z-10"></div>

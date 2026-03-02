@@ -1,8 +1,14 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { Building2, Landmark, Users, CheckCircle2, Heart, Building, Accessibility, PartyPopper, Briefcase } from "lucide-react";
-import parceriaPolitica from "@/assets/parceria-politica.png";
+import parceriaFotoPrincipal from "@/assets/3.jpeg";
+import parceriaFotoApoioUm from "@/assets/4.jpeg";
+import parceriaFotoApoioDois from "@/assets/2.jpeg";
+import { Dialog, DialogContent } from "@/components/ui/dialog";
 
 const Partnerships = () => {
+  const [expandedPhoto, setExpandedPhoto] = useState<{ src: string; alt: string } | null>(null);
+
   const partners = [
     {
       name: "Ruby Moreira Bergamini",
@@ -68,13 +74,61 @@ const Partnerships = () => {
           transition={{ duration: 0.6 }}
           className="mb-16"
         >
-          <div className="relative max-w-2xl mx-auto">
-            <div className="rounded-2xl overflow-hidden shadow-card border border-border">
-              <img
-                src={parceriaPolitica}
-                alt="Ruby Moreira Bergamini e Carlão Pignatari - Trabalhando por Salto"
-                className="w-full h-auto"
-              />
+          <div className="relative max-w-5xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-4">
+              <button
+                type="button"
+                onClick={() =>
+                  setExpandedPhoto({
+                    src: parceriaFotoPrincipal,
+                    alt: "Ruby Moreira Bergamini em parceria política",
+                  })
+                }
+                className="md:row-span-2 rounded-2xl overflow-hidden shadow-card border border-border cursor-zoom-in block"
+                aria-label="Expandir foto principal da parceria"
+              >
+                <img
+                  src={parceriaFotoPrincipal}
+                  alt="Ruby Moreira Bergamini em parceria política"
+                  className="w-full h-full object-cover object-[48%_50%] min-h-[320px] md:min-h-[520px]"
+                />
+              </button>
+
+              <button
+                type="button"
+                onClick={() =>
+                  setExpandedPhoto({
+                    src: parceriaFotoApoioUm,
+                    alt: "Registro de parceria política",
+                  })
+                }
+                className="rounded-2xl overflow-hidden shadow-card border border-border cursor-zoom-in block"
+                aria-label="Expandir foto de reunião da parceria"
+              >
+                <img
+                  src={parceriaFotoApoioUm}
+                  alt="Registro de parceria política"
+                  className="w-full h-full object-cover min-h-[250px]"
+                />
+              </button>
+
+              <button
+                type="button"
+                onClick={() =>
+                  setExpandedPhoto({
+                    src: parceriaFotoApoioDois,
+                    alt: "Atuação em parceria por Salto",
+                  })
+                }
+                className="rounded-2xl overflow-hidden shadow-card border border-border cursor-zoom-in block"
+                aria-label="Expandir segunda foto da parceria"
+              >
+                <img
+                  src={parceriaFotoApoioDois}
+                  alt="Atuação em parceria por Salto"
+                  className="w-full h-full object-cover min-h-[250px]"
+                />
+              </button>
             </div>
             
             {/* Caption */}
@@ -215,6 +269,23 @@ const Partnerships = () => {
             </p>
           </div>
         </motion.div>
+
+        <Dialog
+          open={Boolean(expandedPhoto)}
+          onOpenChange={(open) => {
+            if (!open) setExpandedPhoto(null);
+          }}
+        >
+          <DialogContent className="max-w-6xl w-[96vw] border-0 bg-transparent p-2 shadow-none [&>button]:bg-black/50 [&>button]:text-white [&>button]:opacity-100">
+            {expandedPhoto && (
+              <img
+                src={expandedPhoto.src}
+                alt={expandedPhoto.alt}
+                className="w-full max-h-[88vh] object-contain rounded-2xl"
+              />
+            )}
+          </DialogContent>
+        </Dialog>
       </div>
     </section>
   );
